@@ -1,0 +1,129 @@
+type StakeToken_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  value: BigInt!
+}
+
+type StakeToken_AssetConfigUpdated {
+  id: ID!
+  asset: String!
+  emission: BigInt!
+}
+
+type StakeToken_AssetIndexUpdated {
+  id: ID!
+  asset: String!
+  index: BigInt!
+}
+
+type StakeToken_Cooldown {
+  id: ID!
+  user: String!
+  amount: BigInt!
+}
+
+type StakeToken_CooldownSecondsChanged {
+  id: ID!
+  cooldownSeconds: BigInt!
+}
+
+type StakeToken_DistributionEndChanged {
+  id: ID!
+  endTimestamp: BigInt!
+}
+
+type StakeToken_EIP712DomainChanged {
+  id: ID!
+}
+
+type StakeToken_ExchangeRateChanged {
+  id: ID!
+  exchangeRate: BigInt!
+}
+
+type StakeToken_FundsReturned {
+  id: ID!
+  amount: BigInt!
+}
+
+type StakeToken_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type StakeToken_MaxSlashablePercentageChanged {
+  id: ID!
+  newPercentage: BigInt!
+}
+
+type StakeToken_PendingAdminChanged {
+  id: ID!
+  newPendingAdmin: String!
+  role: BigInt!
+}
+
+type StakeToken_Redeem {
+  id: ID!
+  from: String!
+  to: String!
+  assets: BigInt!
+  shares: BigInt!
+}
+
+type StakeToken_RewardsAccrued {
+  id: ID!
+  user: String!
+  amount: BigInt!
+}
+
+type StakeToken_RewardsClaimed {
+  id: ID!
+  from: String!
+  to: String!
+  amount: BigInt!
+}
+
+type StakeToken_RoleClaimed {
+  id: ID!
+  newAdmin: String!
+  role: BigInt!
+}
+
+type StakeToken_Slashed {
+  id: ID!
+  destination: String!
+  amount: BigInt!
+}
+
+type StakeToken_SlashingExitWindowDurationChanged {
+  id: ID!
+  windowSeconds: BigInt!
+}
+
+type StakeToken_SlashingSettled {
+  id: ID!
+}
+
+type StakeToken_Staked {
+  id: ID!
+  from: String!
+  to: String!
+  assets: BigInt!
+  shares: BigInt!
+}
+
+type StakeToken_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+}
+
+type StakeToken_UserIndexUpdated {
+  id: ID!
+  user: String!
+  asset: String!
+  index: BigInt!
+}
+

@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer
+networks:
+- id: 1
+  start_block: 0
+  contracts:
+  - name: StakeToken
+    address:
+    - 0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d
+    handler: src/EventHandlers.ts
+    events:
+    - event: Approval(address indexed owner, address indexed spender, uint256 value)
+    - event: AssetConfigUpdated(address indexed asset, uint256 emission)
+    - event: AssetIndexUpdated(address indexed asset, uint256 index)
+    - event: Cooldown(address indexed user, uint256 amount)
+    - event: CooldownSecondsChanged(uint256 cooldownSeconds)
+    - event: DistributionEndChanged(uint256 endTimestamp)
+    - event: EIP712DomainChanged()
+    - event: ExchangeRateChanged(uint216 exchangeRate)
+    - event: FundsReturned(uint256 amount)
+    - event: Initialized(uint64 version)
+    - event: MaxSlashablePercentageChanged(uint256 newPercentage)
+    - event: PendingAdminChanged(address indexed newPendingAdmin, uint256 role)
+    - event: Redeem(address indexed from, address indexed to, uint256 assets, uint256 shares)
+    - event: RewardsAccrued(address user, uint256 amount)
+    - event: RewardsClaimed(address indexed from, address indexed to, uint256 amount)
+    - event: RoleClaimed(address indexed newAdmin, uint256 role)
+    - event: Slashed(address indexed destination, uint256 amount)
+    - event: SlashingExitWindowDurationChanged(uint256 windowSeconds)
+    - event: SlashingSettled()
+    - event: Staked(address indexed from, address indexed to, uint256 assets, uint256 shares)
+    - event: Transfer(address indexed from, address indexed to, uint256 value)
+    - event: UserIndexUpdated(address indexed user, address indexed asset, uint256 index)
+rollback_on_reorg: false
